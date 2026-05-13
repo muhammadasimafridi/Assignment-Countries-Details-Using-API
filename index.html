@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+        .country-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 25px 0;
+            width: 90%;
+            max-width: 500px;
+            height: fit-content;
+            border-radius: 4px;
+            box-shadow: 0 0 5px black;
+            padding: 25px;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #country-name{
+            width: 100%;
+            max-width: 340px;
+            height: 35px;
+            padding-left: 8px;
+        }
+        button{
+            width: 100px;
+            height: 35px;
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+        .whole-data-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 15px;
+            width: 60%;
+            height: fit-content;
+            border-radius: 4px;
+            box-shadow: 0 0 5px black;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 25px;
+        }
+        .padd-container{
+            padding: 25px;
+        }
+        p, h2{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        span{
+            font-weight: 900;
+            font-size: 18px;
+            margin-right: 8px;
+            color: blue;
+        }
+        .country-common-name{
+            display: block;
+            width: 100%;
+            font-weight: 900;
+            font-size: 40px;
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+        .full-country-name, .population, .country-capital, .country-borders, .country-area, .country-region{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            width: 49%;
+            height: fit-content;
+            padding: 25px 35px;
+            border-radius: 4px;
+            box-shadow: 0 0 4px black;
+            background-color: white;
+            transition: 0.5s ease-in-out;
+        }
+        .full-country-name:hover, .population:hover, .country-capital:hover, .country-borders:hover, .country-area:hover, .country-region:hover, .country-flag:hover{
+            transform: scale(1.01);
+        }
+        .country-capital{
+            
+        }
+        .country-borders{
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .country-area{
+            
+        }
+        .country-region{
+            
+        }
+        .country-flag{
+            width: 500px;
+            height: 100%;
+            border: 1px solid black;
+            margin: auto;
+        }
+        @media(max-width: 550px){
+            .country-container{
+                gap: 10px;
+                justify-content: center;
+            }
+            #country-name{
+                max-width: 100%;
+            }
+            button{
+                width: 100%;
+            }
+            .whole-data-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                width: 95%;
+                row-gap: 8px;
+            }
+        .full-country-name, .population, .country-capital, .country-borders, .country-area, .country-region{
+            width: 90%;
+            padding: 8px;
+        }
+        .country-flag{
+            width: 90%;
+            border-radius: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="country-container">
+        <input type="text" id="country-name" placeholder="Enter Country Name...">
+        <button>Click</button>
+    </div>
+    <div class="whole-data-container"></div>
+    
+
+    <script src="country.js"></script>
+</body>
+</html>
